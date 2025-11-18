@@ -31,62 +31,43 @@ def track_markup(_, videoid, user_id, channel, fplay):
 def stream_markup_timer(_, chat_id, played, dur):
     played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
-    if duration_sec == 0:
-        percentage = 0
-    else:
-        percentage = (played_sec / duration_sec) * 100
+    percentage = (played_sec / duration_sec) * 100
     umm = math.floor(percentage)
-
-    # Progress bar design
     if 0 < umm <= 10:
-        bar = "◉—————————"
+        bar = "🅚︎—————————"
     elif 10 < umm < 20:
-        bar = "—◉————————"
+        bar = "—🅡︎————————"
     elif 20 <= umm < 30:
-        bar = "——◉———————"
+        bar = "——🅘︎———————"
     elif 30 <= umm < 40:
-        bar = "———◉——————"
+        bar = "———🅣︎——————"
     elif 40 <= umm < 50:
-        bar = "————◉—————"
+        bar = "————🅘︎—————"
     elif 50 <= umm < 60:
-        bar = "—————◉————"
+        bar = "—————🅑︎————"
     elif 60 <= umm < 70:
-        bar = "——————◉———"
+        bar = "——————🅞︎———"
     elif 70 <= umm < 80:
-        bar = "———————◉——"
+        bar = "———————🅣︎——"
     elif 80 <= umm < 95:
-        bar = "————————◉—"
+        bar = "————————🅢︎—"
     else:
-        bar = "—————————◉"
-
-    # Buttons layout (photo-style clean design)
+        bar = "🅚︎—————————"
     buttons = [
-        [
+                [
             InlineKeyboardButton(
-                text="<− 20s",
-                callback_data=f"SeekBackward|{chat_id}|20"
-            ),
-            InlineKeyboardButton(
-                text="• Promo •",
-                url="https://t.me/icxasta"
-            ),
-            InlineKeyboardButton(
-                text="20s +>",
-                callback_data=f"SeekForward|{chat_id}|20"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=f"{played}  {bar}  {dur}",
-                callback_data="GetTimer"
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
             )
         ],
-        [
-            InlineKeyboardButton(
-                text="＋ ᴧDD ϻE Iɴ YσUR ɢRσUP ＋",
-                url=f"https://t.me/{app.username}?startgroup=true"
-            )
+                [
+         InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/{app.username}?startgroup=true",)
         ],
+        [
+         InlineKeyboardButton(text="• ᴏᴡɴᴇʀ •", url="https://t.me/kriti_bot_update"),
+         InlineKeyboardButton(text="• ɢʀᴏᴜᴘ •", url="https://t.me/KRITI_SUPPORT_GROUP"),
+        ],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -94,11 +75,10 @@ def stream_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(
-                text="＋ ᴧDD ϻE Iɴ YσUR ɢRσUP ＋",
-                url=f"https://t.me/{app.username}?startgroup=true"
-            )
-        ]
+         InlineKeyboardButton(text="• ᴏᴡɴᴇʀ •", url="https://t.me/kriti_bot_update"),
+         InlineKeyboardButton(text="• ɢʀᴏᴜᴘ •", url="https://t.me/KRITI_SUPPORT_GROUP"),
+        ],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -124,6 +104,8 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
     ]
     return buttons
 
+
+
 def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     buttons = [
         [
@@ -140,6 +122,8 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
         ],
     ]
     return buttons
+
+
 def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
     query = f"{query[:20]}"
     buttons = [
@@ -168,4 +152,4 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
             ),
         ],
     ]
-    return buttons    
+    return buttons
