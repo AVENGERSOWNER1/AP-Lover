@@ -7,13 +7,13 @@ import httpx
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 start_txt = """**
-<u>❃ ᴡєʟᴄσϻє ᴛᴏ ᴛєᴧϻ ᴋʀɪʀɪ ʀєᴘσs ❃</u>
+<u>❃ Wҽʅƈσɱҽ Tσ Jαɳι Rҽρσʂ ❃</u>
  
-✼ ʀєᴘᴏ ɪs ηᴏᴡ ᴘʀɪᴠᴧᴛє ᴅᴜᴅє 😌
+✼ 𝙍𝙚𝙥𝙤 𝙏𝙤 𝙉𝙝𝙞 𝙈𝙞𝙡𝙚𝙜𝙖 😁
  
-❉  ʏᴏᴜ ᴄᴧη мʏ ᴜsє ᴘᴜʙʟɪᴄ ʀєᴘσs !!  
+❉  पत्थर की मूरत के आगे सिर मत झुका जब कुछ ना बचे तो शैतान से नाता बाना !!  
 
-✼ || [˹ᴋɪʀᴛɪ ꭙ ʙᴏᴛѕ˼ 💞](https://t.me/KRITI_SUPPORT_GROUP) ||
+✼ || [ᴊᴀɴɪ 𔘓 ᴍᴜꜱɪᴄ™♪ 𝚁𔘓𝙿 ](https://t.me/Jani_Music_Robot?start=_tgr_I548BOJjYTg1)) ||
  
 ❊ ʀᴜη 24x7 ʟᴧɢ ϝʀєє ᴡɪᴛʜσᴜᴛ sᴛσᴘ**
 """
@@ -28,18 +28,18 @@ async def start(_, msg):
           InlineKeyboardButton("✙ ᴧᴅᴅ ϻє вᴧʙʏ ✙", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("• ʜєʟᴘ •", url="https://t.me/KRITI_SUPPORT_GROUP"),
-          InlineKeyboardButton("• 𝛅ᴜᴘᴘσʀᴛ •", url="https://t.me/KRITI_SUPPORT_GROUP"),
+          InlineKeyboardButton("• Update •", url="https://t.me/Selfish_Jani_Lover"),
+          InlineKeyboardButton("• Support •", url="https://t.me/+a3O_RK3xMbA1ZGZl"),
           ],
 [
-InlineKeyboardButton("• ϻᴧɪη ʙσᴛ •", url=f"https://t.me/Sanantinimusicbot"),
+InlineKeyboardButton("• ϻᴧɪη ʙσᴛ •", url=f"https://t.me/Jani_Music_Robot"),
 
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
-        photo="https://files.catbox.moe/kbi6t5.jpg",
+        photo="https://litter.catbox.moe/k2zjdk.jpg",
         caption=start_txt,
         reply_markup=reply_markup
     )
