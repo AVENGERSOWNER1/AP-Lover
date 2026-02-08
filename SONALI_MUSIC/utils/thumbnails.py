@@ -86,7 +86,7 @@ async def get_thumb(videoid):
 
         # Top-right "text"
         text_size = draw.textsize("@Power_of_Jani    ", font=font)
-        draw.text((1280 - text_size[0] - 10, 10), "@Power_of_Jani    ", fill="yellow", font=font)
+        draw.text((1280 - text_size[0] - 10, 10), "Dev :- Stark    ", fill="yellow", font=font)
 
         # Channel name + Views 
         draw.text(
