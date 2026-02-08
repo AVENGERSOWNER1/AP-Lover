@@ -137,13 +137,13 @@ async def start_pm(client, message: Message, _):
                 )
 
     else:
-        sona = await message.reply_text(f"**ʜᴇʏ ʙᴧʙʏ {message.from_user.mention}**")
+        Sona = await message.reply_text(f"**ʜᴇʏ ʙᴧʙʏ {message.from_user.mention}**")
         await asyncio.sleep(0.4)
-        await sona.edit_text("**ɪ ᴧᴍ ʏᴏᴜʀ ᴏᴡɴ ᴍᴜsɪᴄ ʙᴏᴛ..🦋**")
+        await Sona.edit_text("**ɪ ᴧᴍ ʏᴏᴜʀ ᴏᴡɴ ᴍᴜsɪᴄ ʙᴏᴛ..🦋**")
         await asyncio.sleep(0.4)
-        await sona.edit_text("**ʜᴏᴡ ᴧʀᴇ ʏᴏᴜ ᴛᴏᴅᴧʏ.....??**")
+        await Sona.edit_text("**ʜᴏᴡ ᴧʀᴇ ʏᴏᴜ ᴛᴏᴅᴧʏ.....??**")
         await asyncio.sleep(0.4)
-        await sona.delete()
+        await Sona.delete()
 
         out = private_panel(_)
         await message.reply_photo(
