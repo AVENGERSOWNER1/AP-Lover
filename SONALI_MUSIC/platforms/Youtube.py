@@ -8,15 +8,15 @@ import yt_dlp
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
 from py_yt import VideosSearch
-from BABYMUSIC.utils.database import is_on_off
-from BABYMUSIC.utils.formatters import time_to_seconds
+from SONALI_MUSIC.utils.database import is_on_off
+from SONALI_MUSIC.utils.formatters import time_to_seconds
 import os
 import glob
 import random
 import logging
 import aiohttp
 from config import LOGGER_ID
-from BABYMUSIC import app
+from SONALI_MUSIC import app
 import config
 from config import BASE_URL, API_KEY
 from urllib.parse import urlparse
@@ -526,3 +526,4 @@ class YouTubeAPI:
             direct = True
             downloaded_file = await download_song(link)
         return downloaded_file, direct
+
